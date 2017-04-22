@@ -4,7 +4,6 @@
 There are a number of packages used from `python3` we need.
 
 ```
-pip3 install bs4 # Beautiful Soup
 pip3 install json # JSON Handling
 pip3 install requests # for HTTP requests
 pip3 install argparse # handle command line arguments
