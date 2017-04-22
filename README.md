@@ -13,7 +13,10 @@ pip3 install hashlib # for unique filenames
 
 ## Usage
 From the command line run:
-```make # see Makefile it's very simple on how to run each of the 4 steps below```
+
+```
+make # see Makefile it's very simple on how to run each of the 4 steps below
+```
 
 Will run all steps and put the data in your CouchDB at `http://127.0.0.1:5984/`. Output from each step is stored in the `output` directory. Reference the `Makefile` to see how each individual step can be run. For example all `json` POSTed to CouchDB will be found in the `output/3` directory.
 
