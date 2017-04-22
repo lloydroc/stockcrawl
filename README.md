@@ -24,7 +24,7 @@ Will run all steps and put the data in your CouchDB at `http://127.0.0.1:5984/`.
 Using `python3` we will do the following:
 
 0. Fetch all stock symbols from the Nasdaq FTP server at `ftp://ftp.nasdaqtrader.com/SymbolDirectory/nasdaqtraded.txt`
-1. Reduce the symbols to exchange traded funds that also don't have $ or . in the names and build YQL queries for Yahoo finance
+1. Reduce the symbols to exchange traded funds that also don't have $ or . in the symbol name (e.g. stock ticker) and build YQL queries for Yahoo finance
 2. Query Yahoo finance and store the JSON. Note the query is from the `yahoo.finance.quotes` table.
 3. Massage the Yahoo Finance JSON into CouchDB format and POST to CouchDB
 
