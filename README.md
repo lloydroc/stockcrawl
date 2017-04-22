@@ -1,11 +1,15 @@
-# Store Stock Data from Yahoo Finance in CouchDB using Python
+# Store Stock Data from Yahoo Finance in CouchDB using Python3
 
 ## Required Python Packages
-```pip3 install bs4 # Beautiful Soup
+There are a number of packages used from `python3` we need.
+
+```
+pip3 install bs4 # Beautiful Soup
 pip3 install json # JSON Handling
 pip3 install requests # for HTTP requests
 pip3 install argparse # handle command line arguments
-pip3 install hashlib # for unique filenames```
+pip3 install hashlib # for unique filenames
+```
 
 ## Usage
 From the command line run:
