@@ -1,4 +1,4 @@
-all: couchdb-running clean step0-fetch-symbols step1-build-queries step2-query-yahoo-finance step3-store-stocks-couchdb
+all: couchdb-running clean step0-fetch-symbols step1-build-queries step2-query-yahoo-finance step3-store-stocks-couchdb step3-store-stocks-couchdb step4-scrape-sp500-data step5-merge-sp500-data
 
 # From FTP fetch all traded symbols on the Nasdaq
 step0-fetch-symbols:
@@ -15,6 +15,14 @@ step2-query-yahoo-finance:
 # Post our JSON output from step 2 into CouchDb
 step3-store-stocks-couchdb:
 	python3 3-store_stocks_couchdb.py
+
+# Scrape S&P500 Data from Wikipedia
+step4-scrape-sp500-data:
+	python3 4-scrape_sp500.py
+
+# Merge S&P500 Data to CouchDB
+step5-merge-sp500-data:
+	python3 5-merge_sp500_data.py
 
 # For OS X At least, more here for memory
 couchdb-start:
