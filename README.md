@@ -1,4 +1,4 @@
-# Store Stock Data from Yahoo Finance in CouchDB using Python
+# Store Stock Data from Yahoo Finance in CouchDB and CSV using Python
 
 ## Required Python Packages
 ```pip3 install bs4 # Beautiful Soup
