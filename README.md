@@ -9,9 +9,9 @@ pip3 install hashlib # for unique filenames
 ```
 
 ## Usage
-```make # see Makefile it's very simple on how to run each of the 4 steps below```
+```make # see Makefile - recipes will correspond to each of the steps below```
 
-Will run all steps and put the data in your CouchDB at `http://127.0.0.1:5984/`. Output from each step is stored in the `output` directory. Reference the `Makefile` to see how each individual step can be run. For example all `json` POSTed to CouchDB will be found in the `output/3` directory.
+Will run all steps and put the data in your CouchDB at `http://127.0.0.1:5984/`. Output from each step is stored in the `output` directory. Reference the `Makefile` to see how each individual step can be run. For example all `json` POSTed to CouchDB will be found in the `output/3` directory which corresponds to Step 3 below.
 
 # Steps used to Fetch and Store the Stock Data
 Using `python3` we will do the following:
@@ -25,13 +25,9 @@ Using `python3` we will do the following:
 
 We store files from each step in the `output` folder.
 
-http://127.0.0.1:5984/_utils/
+## Querying Stock information from CouchDB
 
-jq -r ".[] | .symbol" stocks.json
-
-## Querying Stocks from CouchDB
-
-Consider the map function:
+Consider the map function for CouchDB:
 
 ```
 function(doc) {
