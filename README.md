@@ -20,6 +20,7 @@ Using `python3` we will do the following:
 3. Massage the Yahoo Finance JSON into CouchDB format and POST to CouchDB
 4. Scrape Wikipedia for S&P 500 Stock Information
 5. Merge S&P 500 Stock Information the CouchDB Data
+5. Convert the CouchDB data to csv (comma separated values)
 
 We store files from each step in the `output` folder.
 

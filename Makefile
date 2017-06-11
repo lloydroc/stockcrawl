@@ -24,6 +24,9 @@ step4-scrape-sp500-data:
 step5-merge-sp500-data:
 	python3 5-merge_sp500_data.py
 
+step6-convert-csv:
+	python3 6-convert_csv.py
+
 # For OS X At least, more here for memory
 couchdb-start:
 	brew services start couchdb

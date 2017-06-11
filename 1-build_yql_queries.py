@@ -18,14 +18,13 @@ def main(args):
   nasdaq_json=args.infile.read()
   obj=json.loads(nasdaq_json)
   for stock in obj:
-    if(chunklen<MAXCHUNKLEN):
-      symbol = stock["Symbol"]
-      etf = stock["ETF"]=="N"
-      if(etf and symbol.find("$") == -1 and symbol.find(".") == -1): # filter out non ETF and $ or . in the symbol
-        nextticker='"%s"' % (symbol)
-        symbols.append(nextticker)
-        chunklen+=len(nextticker)
-    else:
+    symbol = stock["Symbol"]
+    nonetf = stock["ETF"]=="N"
+    if nonetf and symbol.find("$") == -1: # filter out non ETF and $ in the symbol
+      nextticker='"%s"' % (symbol)
+      symbols.append(nextticker)
+      chunklen+=len(nextticker)
+    if(chunklen>=MAXCHUNKLEN):
       addYqlQuery(symbols)
       symbols=[]
       chunklen=0

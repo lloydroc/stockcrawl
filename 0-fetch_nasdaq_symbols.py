@@ -50,4 +50,3 @@ if __name__ == '__main__':
   args.jsonoutput=open(args.destdir+args.jsonoutput,"w")
   args.fetchedfile=open(args.destdir+args.fetchedfile,"w")
   main(args)
-
